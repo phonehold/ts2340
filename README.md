@@ -1,9 +1,8 @@
-### logapi broken on 4.1.0
+### logapi broken on 4.1.0 (log doesn't work)
 
 
 
-The code Working properly at 4.0.1 and 4.0.2
-
+**The code Working properly at 4.0.1 and 4.0.2**
 
 4.1.0 broken (such as cacheurl plugin)
 
@@ -59,5 +58,10 @@ logapi.log_ats410.20131112.11h26m25s-20131112.11h30m05s.old
 my records.config set 
 
 	CONFIG proxy.config.log.rolling_interval_sec INT 86400
+	
+	
+
+	
+	
 
 

@@ -50,5 +50,14 @@ cat diags.log
 		wget -SO /dev/null -e http_proxy=127.0.0.1 http://www.test.com/ben.bc
 		
 
+every request will store logapi.log ,but it store two record and stop
+
+when restart ats  it will be rolling
+logapi.log_ats410.20131112.11h26m25s-20131112.11h30m05s.old
+
+
+my records.config set 
+
+	CONFIG proxy.config.log.rolling_interval_sec INT 86400
 
 

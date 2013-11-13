@@ -1,0 +1,25 @@
+From 56fde2afb5042a398d5375b22c1f7adebe6ea71e Mon Sep 17 00:00:00 2001
+From: yingcai.huang <betty.huang@verycdn.com.cn>
+Date: Wed, 13 Nov 2013 11:31:49 +0800
+Subject: [PATCH] fix 2340
+Content-Type: text/plain; charset="utf-8"
+
+---
+ proxy/InkAPI.cc |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/proxy/InkAPI.cc b/proxy/InkAPI.cc
+index f51f4c8..28db7fe 100644
+--- a/proxy/InkAPI.cc
++++ b/proxy/InkAPI.cc
+@@ -6758,6 +6758,7 @@ TSTextLogObjectCreate(const char *filename, int mode, TSTextLogObject *new_objec
+                                               (bool) mode & TS_LOG_MODE_ADD_TIMESTAMP,
+                                               NULL,
+                                               Log::config->rolling_enabled,
++					      Log::config->collation_preproc_threads,
+                                               Log::config->rolling_interval_sec,
+                                               Log::config->rolling_offset_hr,
+                                               Log::config->rolling_size_mb));
+-- 
+1.7.1
+
